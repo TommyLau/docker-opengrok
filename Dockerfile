@@ -3,10 +3,11 @@ FROM ubuntu:16.04
 MAINTAINER Tommy Lau <tommy@gen-new.com>
 
 # Setup useful environment variables
-ENV GROK_HOME       /grok
-ENV GROK_VERSION	0.12.1.6
-#ENV DOWNLOAD_URL    https://github.com/OpenGrok/OpenGrok/files/467358/opengrok-${GROK_VERSION}.tar.gz.zip
-ENV DEBIAN_FRONTEND noninteractive
+ENV GROK_HOME               /grok
+ENV OPENGROK_INSTANCE_BASE  ${GROK_HOME}
+ENV GROK_VERSION            0.12.1.6
+#ENV DOWNLOAD_URL            https://github.com/OpenGrok/OpenGrok/files/467358/opengrok-${GROK_VERSION}.tar.gz.zip
+ENV DEBIAN_FRONTEND         noninteractive
 
 LABEL Description="This image is used to start OpenGrok" Vendor="Tommy Lau" Version="${GROK_VERSION}"
 
