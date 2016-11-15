@@ -13,7 +13,7 @@ LABEL Description="This image is used to start OpenGrok" Vendor="Tommy Lau" Vers
 
 # Install needed packages
 RUN apt update -qq \
-    && apt install -y --no-install-recommends exuberant-ctags tomcat7 openjdk-8-jdk-headless wget unzip \
+    && apt install -y --no-install-recommends exuberant-ctags inotify-tools openjdk-8-jdk-headless tomcat7 unzip wget \
     && apt clean autoclean \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
